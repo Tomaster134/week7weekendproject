@@ -9,11 +9,18 @@ html {
 }
 
 body {
+  position: relative;
   background-image: url(https://images.pexels.com/photos/631342/pexels-photo-631342.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 100%;
+}
+
+.header {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 5px;
 }
 
 .container-overall {
@@ -23,7 +30,7 @@ body {
 }
 
 #weather-form {
-  margin: 50px;
+  margin: 50px 50px 30px 50px;
   border: none;
 }
 
@@ -53,14 +60,58 @@ body {
 }
 
 .weather-container-active {
-    background-color: rgba(115, 121, 228, 0.5);
-    border-radius: 25px;
-    padding: 20px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  background-color: rgba(115, 121, 228, 0.5);
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.accordion-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.accordion-item {
+  background-color: transparent;
+  border: none;
+}
+
+.accordion {
+  width: auto;
+  margin-top: 30px;
+}
+
+.accordion-button {
+  background-color: rgba(115, 121, 228, 0.75);
+  padding: 16px 45px 16px 25px;
+}
+
+.long-forecast-card {
+  width: 13%;
+  font-size: 0.8rem;
+}
+
+.day-forecast {
+  font-size: 1.2rem;
+  position: relative;
+  top: -10px;
+  margin-bottom: 0;
+}
+
+.blurb-container {
+  width: 175px;
+  height: 50px;
+}
+
+.accordion-button::after {
+  position: absolute;
+  z-index: 100;
+  margin-left: 5px;
 }
