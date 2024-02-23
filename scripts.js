@@ -68,12 +68,13 @@ form.addEventListener("submit", async (event) => {
   const info = await weather(lookup);
   console.log(info);
   weatherContainer.innerHTML = `
+  ${info.location}<br>
+    Today's Forecast: ${info.forecast}<br>
     <img src='${info.icon}'><br>
-    ${info.location}<br>
     Current Temp: ${info.current}°F<br>
     Today's High: ${info.high}°F<br>
     Today's Low: ${info.low}°F<br>
     Today's Humidity: ${info.overall_humidity}%<br>
-    Today's Forecast: ${info.forecast}
     `;
+    weatherContainer.classList.add('weather-container-active')
 });
