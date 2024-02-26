@@ -115,3 +115,129 @@ body {
   z-index: 100;
   margin-left: 5px;
 }
+
+.rain-card {
+  position: relative;
+}
+
+.rain-card:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  border-radius: 25px;
+  background-image: url(https://images.pexels.com/photos/1028600/pexels-photo-1028600.jpeg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  z-index: -1;
+}
+
+.cloud-card {
+  position: relative;
+}
+
+.cloud-card:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  border-radius: 25px;
+  background-image: url(https://images.pexels.com/photos/531972/pexels-photo-531972.jpeg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  z-index: -1;
+}
+
+.sun-card {
+  position: relative;
+}
+
+.sun-card:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  border-radius: 25px;
+  background-image: url(https://images.pexels.com/photos/912364/pexels-photo-912364.jpeg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  z-index: -1;
+}
+
+.lightning-card {
+  position: relative;
+}
+
+.lightning-card:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  border-radius: 25px;
+  background-image: url(https://images.pexels.com/photos/680940/pexels-photo-680940.jpeg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  z-index: -1;
+}
+
+.snow-card {
+  position: relative;
+}
+
+.snow-card:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  border-radius: 25px;
+  background-image: url(https://images.pexels.com/photos/6434739/pexels-photo-6434739.jpeg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  z-index: -1;
+}
+
+.mist-card {
+  position: relative;
+}
+
+.mist-card:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  border-radius: 25px;
+  background-image: url(https://images.pexels.com/photos/15433900/pexels-photo-15433900/free-photo-of-fog-by-the-sea-in-black-and-white.jpeg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  z-index: -1;
+}

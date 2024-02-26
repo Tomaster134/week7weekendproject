@@ -93,6 +93,7 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const lookup = form[0].value;
   const info = await weather(lookup);
+  weatherContainer.classList = ''
   weatherContainer.innerHTML = `
     <p class="day-forecast">${info[0].location}</p>
     Today's Forecast: ${info[0].forecast}<br>
@@ -104,6 +105,24 @@ form.addEventListener("submit", async (event) => {
     Today's Humidity: ${info[0].overall_humidity}%<br>
     `;
   weatherContainer.classList.add("weather-container-active");
+  if (info[0].icon == 'https://openweathermap.org/img/wn/10d@2x.png' || info[0].icon == 'https://openweathermap.org/img/wn/09d@2x.png') {
+    weatherContainer.classList.add('rain-card')
+  }
+  else if (info[0].icon == 'https://openweathermap.org/img/wn/02d@2x.png' || info[0].icon == 'https://openweathermap.org/img/wn/03d@2x.png' || info[0].icon == 'https://openweathermap.org/img/wn/04d@2x.png') {
+    weatherContainer.classList.add('cloud-card')
+  }
+  else if (info[0].icon == 'https://openweathermap.org/img/wn/01d@2x.png') {
+    weatherContainer.classList.add('sun-card')
+  }
+  else if (info[0].icon == 'https://openweathermap.org/img/wn/11d@2x.png') {
+    weatherContainer.classList.add('lightning-card')
+  }
+  else if (info[0].icon == 'https://openweathermap.org/img/wn/13d@2x.png') {
+    weatherContainer.classList.add('snow-card')
+  }
+  else if (info[0].icon == 'https://openweathermap.org/img/wn/50d@2x.png') {
+    weatherContainer.classList.add('mist-card')
+  }
   longForecast.innerHTML = `
   <div class="accordion" id="accordion-div">
       <div class="accordion-item">
@@ -139,6 +158,25 @@ form.addEventListener("submit", async (event) => {
     <p class="day-info">Low: ${info[idx].low}°F</p>
     <p class="day-info">Humidity: ${info[idx].humidity}%</p>
     `;
+    if (info[idx].icon == 'https://openweathermap.org/img/wn/10d@2x.png' || info[idx].icon == 'https://openweathermap.org/img/wn/09d@2x.png') {
+      day_forecast.classList.add('rain-card')
+    }
+    else if (info[idx].icon == 'https://openweathermap.org/img/wn/02d@2x.png' || info[idx].icon == 'https://openweathermap.org/img/wn/03d@2x.png' || info[idx].icon == 'https://openweathermap.org/img/wn/04d@2x.png') {
+      day_forecast.classList.add('cloud-card')
+    }
+    else if (info[idx].icon == 'https://openweathermap.org/img/wn/01d@2x.png') {
+      day_forecast.classList.add('sun-card')
+    }
+    else if (info[idx].icon == 'https://openweathermap.org/img/wn/11d@2x.png') {
+      day_forecast.classList.add('lightning-card')
+    }
+    else if (info[idx].icon == 'https://openweathermap.org/img/wn/13d@2x.png') {
+      day_forecast.classList.add('snow-card')
+    }
+    else if (info[idx].icon == 'https://openweathermap.org/img/wn/50d@2x.png') {
+      day_forecast.classList.add('mist-card')
+    }
     accordion.append(day_forecast);
   }
+  
 });
